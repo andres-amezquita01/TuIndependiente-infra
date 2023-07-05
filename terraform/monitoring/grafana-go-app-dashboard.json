@@ -12,6 +12,7 @@
       }
     ]
   },
+  "description": "",
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
@@ -404,7 +405,7 @@
           "refId": "A"
         }
       ],
-      "title": "used | total",
+      "title": "In use | total",
       "type": "gauge"
     },
     {
@@ -443,12 +444,12 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-6h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
-  "title": "go-app",
+  "title": "TuIndependiente",
   "uid": "jMcDXfrVk",
-  "version": 13
+  "version": 16
 }
