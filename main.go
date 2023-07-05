@@ -136,7 +136,7 @@ func CancelService(writer http.ResponseWriter, request *http.Request) {
 	response := "Service " + strconv.Itoa(id) + " was successfully cancelled"
 
 	requestsTotal.Inc()
-
+	requestsCancelService.Inc()
 	rkmuxinter.WriteJson(writer, http.StatusOK, &ServiceResponse{
 		Result: response,
 	})

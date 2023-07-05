@@ -44,7 +44,7 @@ resource "aws_instance" "monitor" {
   instance_type = "${var.ec2_type}"
   ami = "${var.ami}"
   subnet_id = aws_subnet.public_subnets[0].id
-  key_name = "${var.key_name}"
+  # key_name = "${var.key_name}"
   associate_public_ip_address = "true"
   security_groups = [ aws_security_group.monitor-sg.id ]
   user_data = "${file("../scripts/install_docker.sh")}"

@@ -15,7 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 3,
+  "id": 1,
   "links": [],
   "panels": [
     {
@@ -43,8 +43,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 11,
+        "h": 10,
+        "w": 6,
         "x": 0,
         "y": 0
       },
@@ -102,9 +102,9 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 8,
-        "w": 13,
-        "x": 11,
+        "h": 10,
+        "w": 18,
+        "x": 6,
         "y": 0
       },
       "id": 4,
@@ -170,7 +170,7 @@
         "h": 5,
         "w": 8,
         "x": 0,
-        "y": 8
+        "y": 10
       },
       "id": 8,
       "options": {
@@ -192,192 +192,14 @@
       "targets": [
         {
           "exemplar": true,
-          "expr": "myapp_requests_bin",
+          "expr": "myapp_requests_cancel",
           "interval": "",
-          "legendFormat": "requests to /bin",
+          "legendFormat": "requests to cancel a service",
           "refId": "A"
         }
       ],
-      "title": "Requests to /bin",
+      "title": "Requests to cancel service",
       "type": "stat"
-    },
-    {
-      "datasource": null,
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 8,
-        "x": 8,
-        "y": 8
-      },
-      "id": 6,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "text": {},
-        "textMode": "auto"
-      },
-      "pluginVersion": "8.0.6",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "myapp_requests_add",
-          "interval": "",
-          "legendFormat": "Requests to /add",
-          "refId": "A"
-        }
-      ],
-      "timeFrom": null,
-      "timeShift": null,
-      "title": "Requests to /add",
-      "type": "stat"
-    },
-    {
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 8,
-        "x": 16,
-        "y": 8
-      },
-      "id": 10,
-      "options": {
-        "colorMode": "value",
-        "graphMode": "area",
-        "justifyMode": "auto",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "text": {},
-        "textMode": "auto"
-      },
-      "pluginVersion": "8.0.6",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "myapp_requests_sub",
-          "interval": "",
-          "legendFormat": "requests to /sub",
-          "refId": "A"
-        }
-      ],
-      "title": "Requests to /sub",
-      "type": "stat"
-    },
-    {
-      "datasource": null,
-      "description": "",
-      "fieldConfig": {
-        "defaults": {
-          "color": {
-            "mode": "thresholds"
-          },
-          "mappings": [],
-          "thresholds": {
-            "mode": "absolute",
-            "steps": [
-              {
-                "color": "green",
-                "value": null
-              },
-              {
-                "color": "red",
-                "value": 80
-              }
-            ]
-          }
-        },
-        "overrides": []
-      },
-      "gridPos": {
-        "h": 5,
-        "w": 8,
-        "x": 0,
-        "y": 13
-      },
-      "id": 12,
-      "options": {
-        "reduceOptions": {
-          "calcs": [
-            "lastNotNull"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showThresholdLabels": false,
-        "showThresholdMarkers": true,
-        "text": {}
-      },
-      "pluginVersion": "8.0.6",
-      "targets": [
-        {
-          "exemplar": true,
-          "expr": "myapp_requests_mul",
-          "interval": "",
-          "legendFormat": "requests to /mul",
-          "refId": "A"
-        }
-      ],
-      "title": "Requests to /mul",
-      "type": "gauge"
     },
     {
       "datasource": null,
@@ -408,7 +230,7 @@
         "h": 5,
         "w": 8,
         "x": 8,
-        "y": 13
+        "y": 10
       },
       "id": 14,
       "options": {
@@ -441,7 +263,6 @@
     },
     {
       "datasource": null,
-      "description": "",
       "fieldConfig": {
         "defaults": {
           "color": {
@@ -468,9 +289,98 @@
         "h": 5,
         "w": 8,
         "x": 16,
-        "y": 13
+        "y": 10
       },
-      "id": 16,
+      "id": 6,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "auto"
+      },
+      "pluginVersion": "8.0.6",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "myapp_requests_add",
+          "interval": "",
+          "legendFormat": "Requests to /add",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Requests to create service",
+      "type": "stat"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 0,
+        "y": 15
+      },
+      "id": 12,
+      "options": {
+        "content": "# Golang Version\n\n  go 1.20.5\n           ",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.0.6",
+      "targets": [
+        {
+          "exemplar": true,
+          "expr": "myapp_requests_mul",
+          "interval": "",
+          "legendFormat": "requests to /mul",
+          "refId": "A"
+        }
+      ],
+      "title": "Programming language",
+      "type": "text"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 8,
+        "y": 15
+      },
+      "id": 10,
       "options": {
         "orientation": "auto",
         "reduceOptions": {
@@ -488,16 +398,44 @@
       "targets": [
         {
           "exemplar": true,
+          "expr": "go_memstats_sys_bytes",
+          "interval": "",
+          "legendFormat": "Memory",
+          "refId": "A"
+        }
+      ],
+      "title": "used | total",
+      "type": "gauge"
+    },
+    {
+      "datasource": null,
+      "description": "",
+      "gridPos": {
+        "h": 5,
+        "w": 8,
+        "x": 16,
+        "y": 15
+      },
+      "id": 16,
+      "options": {
+        "content": "# TuIndependiente\n  v1.0.0 \\\\\n  You can find the API: [TuIndependiente](http://staging-lb-1383736276.us-east-1.elb.amazonaws.com/docs/)\n           ",
+        "mode": "markdown"
+      },
+      "pluginVersion": "8.0.6",
+      "targets": [
+        {
+          "exemplar": true,
           "expr": "myapp_requests_div",
           "interval": "",
           "legendFormat": "requests to /div",
           "refId": "A"
         }
       ],
-      "title": "Requests to /div",
-      "type": "gauge"
+      "title": "App version",
+      "type": "text"
     }
   ],
+  "refresh": "",
   "schemaVersion": 30,
   "style": "dark",
   "tags": [],
@@ -505,12 +443,12 @@
     "list": []
   },
   "time": {
-    "from": "now-6h",
+    "from": "now-5m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "go-app",
-  "uid": "mTxe7O_Vk8",
-  "version": 2
+  "uid": "jMcDXfrVk",
+  "version": 13
 }
